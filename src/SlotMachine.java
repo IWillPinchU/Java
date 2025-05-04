@@ -10,10 +10,10 @@ public class SlotMachine {
         int balance;
         int amount;
         int bet;
-        int payout = 0;
+        int payout;
         char choice;
         String add;
-        String[] row = new String[3];
+        String[] row;
         String[] symbols = {"⭐","🍒", "🍕","🔔","🫃"};
         boolean isFirstTurn = true;
 
@@ -66,9 +66,8 @@ public class SlotMachine {
                     } while (amount < 0);
                     balance += amount;
                     System.out.println("Balance Updated Successfully!");
-                    continue;
                 }
-                else continue;
+                continue;
             }
             else if (bet <= 0){
                 System.out.println("Bet must be greater than 0");
@@ -86,6 +85,7 @@ public class SlotMachine {
 
             System.out.println("Would you like to spin?(Y/N): ");
             choice = scanner.next().toUpperCase().charAt(0);
+            scanner.nextLine();
 
             if (choice == 'Y'){
                 System.out.println("Spinning....");
