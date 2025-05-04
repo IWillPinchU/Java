@@ -19,6 +19,8 @@ public class SlotMachine {
 
         System.out.println("-----------------------------------------");
         System.out.println("WELCOME TO SLOTS!");
+        System.out.println("-----------------------------------------");
+
         do {
             System.out.println("How much money would you like to Add? (must be positive): ");
             balance = scanner.nextInt();
@@ -44,12 +46,15 @@ public class SlotMachine {
                     break;
                 }
             }
+
             isFirstTurn = false;
+
             System.out.println("-----------------------------------------");
             System.out.println("Current Balance is: ₹" + balance);
             System.out.println("Place your bet amount: ");
             bet = scanner.nextInt();
             scanner.nextLine();
+
             if(bet > balance) {
                 System.out.println("-----------------------------------------");
                 System.out.println("INSUFFICIENT FUNDS");
@@ -112,6 +117,7 @@ public class SlotMachine {
                 break;
             }
         }
+
         scanner.close();
     }
     static String[] spinRow(){
